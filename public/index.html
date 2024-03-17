@@ -9,6 +9,19 @@
     <link rel="apple-touch-icon" href="./images/logo.png" />
     <link rel="manifest" href="./manifest.json" />
     <title>Weather App</title>
+    <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '65f6f0b6558bed48960bee3c' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
