@@ -68,8 +68,8 @@ cp .env.example .env
 
 Your `.env` file should look like this:
 ```env
-WEATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
-WEATHER_API_KEY=your_actual_api_key_here
+REACT_APP_WEATHER_API_URL=https://api.openweathermap.org/data/2.5/weather
+REACT_APP_WEATHER_API_KEY=your_actual_api_key_here
 ```
 
 4. Start the development server:
@@ -90,7 +90,7 @@ npm start
    ```
 3. Add your API key to `.env`:
    ```env
-   WEATHER_API_KEY=your_actual_api_key_here
+   REACT_APP_WEATHER_API_KEY=your_actual_api_key_here
    ```
 4. Restart the development server if it's already running
 
