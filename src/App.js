@@ -27,44 +27,21 @@ const App = () => {
     }
   }
 
-  const handleSearchClick = async () => {
-    if (query.trim()) {
-      setLoading(true);
-      setError('');
-
-      try {
-        const data = await fetchWeather(query);
-        setWeather(data);
-        setQuery('');
-      } catch (err) {
-        setError(err.message || 'An error occurred while fetching weather data');
-        setWeather({});
-      } finally {
-        setLoading(false);
-      }
-    }
-  }
+  const containerStyle = {
+    background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418)), url(${process.env.PUBLIC_URL}/images/leaves.jpg)`
+  };
 
   return (
-    <div className='main-container'>
-      <div className='search-container'>
-        <input
-          type='text'
-          className='search'
-          placeholder='Search for a city...'
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={search}
-          disabled={loading}
-        />
-        <button
-          className='search-button'
-          onClick={handleSearchClick}
-          disabled={loading || !query.trim()}
-        >
-          {loading ? 'Searching...' : 'Search'}
-        </button>
-      </div>
+    <div className='main-container' style={containerStyle}>
+      <input
+        type='text'
+        className='search'
+        placeholder='Search for a city...'
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        onKeyDown={search}
+        disabled={loading}
+      />
 
       {error && (
         <div className='error-message'>
